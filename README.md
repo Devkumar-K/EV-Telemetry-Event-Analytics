@@ -2,7 +2,7 @@
 
 
 ## Overview
-Pipeline to extract **IgnitionEvents** and **ChargingEvents** from EV telematics and trigger data.
+A Data analytics Pipeline to extract **IgnitionEvents** and **ChargingEvents** from EV telematics and trigger data.
 
 ## Quick Start
 ```bash
