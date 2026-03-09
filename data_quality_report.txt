@@ -1,0 +1,35 @@
+DATA QUALITY REPORT
+============================================================
+
+1. TLM: 93 rows with unparseable timestamps — dropped.
+
+2. TLM: 1200 rows have IGNITION_STATUS='unknown' — treated as missing.
+
+3. TLM: 1004 battery readings > 100 % — capped at 100.
+
+4. TLM: 10000 duplicate row IDs — deduplicated.
+
+5. TLM: Column 'SPEED' is 80.8% null (1,473,655/1,823,459) — sparse but usable.
+
+6. TLM: Column 'IGNITION_STATUS' is 87.6% null (1,596,443/1,823,459) — sparse but usable.
+
+7. TLM: Column 'EV_BATTERY_LEVEL' is 78.8% null (1,436,345/1,823,459) — sparse but usable.
+
+8. TLM: Column 'ODOMETER' is 73.6% null (1,342,181/1,823,459) — sparse but usable.
+
+9. TRG: 9627 exact duplicate rows — deduplicated.
+
+10. MAP: Vehicle 026af092-a01e-4b0a-af38-f459725dabc6 has no PNIDs — will get events only from TLM/SYN.
+
+11. MAP: Vehicle 654f3d0f-f2f9-4fc6-856d-91337bef92f7 has no PNIDs — will get events only from TLM/SYN.
+
+12. MAP: Vehicle ae912623-e122-4bfb-b2a1-7d407ea42b1b has no PNIDs — will get events only from TLM/SYN.
+
+13. MAP: Vehicle 39424065-b3be-45e5-8f7d-b7f16a6c190a has no PNIDs — will get events only from TLM/SYN.
+
+14. TRG→IGN: 18285 IGN_CYL rows with unmapped PNIDs: [186776160, 187360712, 187373626, 187373662, 187373670, 193290358, 206958332, 207925262, 207925484, 255506821, 258703729, 258754391, 258756325, 264921353, 266214265, 270768911] — dropped.
+
+15. Ignition fusion: 11 near-duplicate events removed (same vehicle + event within 10 s).
+
+16. TRG→ChargeStatus: 3159 EV_CHARGE_STATE rows with unmapped PNIDs: [186776160, 187360712, 187373626, 187373670, 193290358, 206958332, 207925262, 207925484, 255506821, 258703729, 258754391, 258756325, 264921353, 266214265, 270768911] — dropped.
+
