@@ -60,3 +60,11 @@ Outputs are written to `output/`:
 - **Debouncing**:
   - Sessions separated by < 5 min are merged into one continuous charge.
   - Sessions < 60 s total duration are discarded as noise.
+## Dataset
+
+The dataset is hosted externally.
+
+Dataset link:  
+https://drive.google.com/file/d/1Fap7vvtLjEDkh2lNIOZKV76jpf6Gtl9T/view?usp=drive_link
+
+Download and extract the dataset before running the pipeline.
