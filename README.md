@@ -2,7 +2,9 @@
 
 
 ## Overview
-A Data analytics Pipeline to extract **IgnitionEvents** and **ChargingEvents** from EV telematics and trigger data.
+This project is a Python-based data processing and analytics pipeline designed to extract meaningful events from electric vehicle (EV) telematics and trigger data. 
+
+The pipeline fuses multiple data sources to accurately track vehicle ignition states, reconstruct vehicle battery timelines, identify real charging sessions, and auto-generate comprehensive visualizations.
 
 ## Quick Start
 ```bash
@@ -60,6 +62,15 @@ Outputs are written to `output/`:
 - **Debouncing**:
   - Sessions separated by < 5 min are merged into one continuous charge.
   - Sessions < 60 s total duration are discarded as noise.
+## Visualizations Explained
+
+- **Ignition Timeline**: Maps `Ignition ON` and `Ignition OFF` events to vehicle IDs over time.
+- **Battery Over Time**: Approximates total battery levels across time leveraging valid charging session anchors.
+- **Duration Histogram**: Distribution of the length of charging sessions in minutes.
+- **Gain Boxplot**: Statistical distribution analyzing median, quartiles, and outliers of the battery percentage gained per session.
+- **Sessions by Vehicle**: A bar chart breakdown summarizing the total volume of charging interactions mapped by vehicle.
+- **Duration vs. Gain**: A scatter plot visualizing the efficiency correlation between total minutes spent charging vs actual percentage gained.
+- **Activity Heatmap**: A 24-hour heatmap detailing the density of active charging sessions based on the exact start hour per vehicle.
 ## Dataset
 
 The dataset is hosted externally.
